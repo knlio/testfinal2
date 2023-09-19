@@ -1,31 +1,10 @@
+# This file lists the Python packages that your project needs.
+# Each line in the file should contain the name of a package, and optionally, a version requirement.
+#
+# To install the dependencies listed in this file, run the following command:
+#
+# pip install -r requirements.txt
+
 openai==0.27.8
 streamlit==0.88.0
 python-dotenv==0.19.2
-openai
-name: Install Dependencies
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  install:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-
-    - name: Upgrade pip
-      run: |
-        python -m pip install --upgrade pip
-
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
