@@ -64,4 +64,4 @@ if button_conversation:
   context.append({'role':'user', 'content':f"{prompt}"})
   response = get_completion_from_messages(context)
   context.append({'role':'assistant', 'content':f"{response}"})
-  st.write(f"Assistant: {response}"))
+  st.write(f"Assistant: {response}")
